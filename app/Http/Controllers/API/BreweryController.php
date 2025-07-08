@@ -18,6 +18,6 @@ class BreweryController extends Controller
             params: $request->only(['page', 'per_page'])
         );
 
-        return response()->json($results);
+        return response()->json(['data' => $results]);
     }
 }

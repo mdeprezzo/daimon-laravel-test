@@ -31,7 +31,7 @@ export default function Dashboard() {
         window.axios
             .get(route('api.breweries.index'), { params })
             .then(response => {
-                setBreweries(response.data);
+                setBreweries(response.data.data);
                 setLoading(false);
             })
       }, [page, perPage]);    
